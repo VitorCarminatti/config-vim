@@ -43,6 +43,8 @@ Bundle 'plasticboy/vim-markdown'
 
 Bundle 'dyng/ctrlsf.vim'
 
+Plugin 'mattn/emmet-vim'
+
 set tags=./tags; " Set tags directory
 set autoindent " Auto indention should be on
 
@@ -57,7 +59,7 @@ augroup myfiletypes
 	" Clear old autocmds in group
 	autocmd!
 	" autoindent with two spaces, always expand tabs
-	autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
+	autocmd FileType ruby,eruby,yaml,markdown,html,css,js set ai sw=2 sts=2 et
 augroup END
 " ================
 
@@ -175,6 +177,8 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
+
+set relativenumber
 
 map <silent> <C-\> :NERDTreeFocus<CR>
 
