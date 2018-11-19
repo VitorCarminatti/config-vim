@@ -45,6 +45,8 @@ Bundle 'dyng/ctrlsf.vim'
 
 Plugin 'mattn/emmet-vim'
 
+Plugin 'rails.vim'
+
 set tags=./tags; " Set tags directory
 set autoindent " Auto indention should be on
 
