@@ -170,8 +170,6 @@ set clipboard=unnamed
 
 set bs=2
 
-set tabstop=2
-
 " Don't be a noob, join the no arrows key movement
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -184,9 +182,16 @@ noremap   <Right>  <NOP>
 
 inoremap <C-Return> <CR><CR><C-o>k<Tab>
 
+" show existing tab with 4 spaces width
+set tabstop=2
+" when indenting with '>', use 4 spaces width
 set shiftwidth=2
+" On pressing tab, insert 4 spaces
+set expandtab
 
 set relativenumber
+
+autocmd BufWritePre * %s/\s\+$//e
 
 if has('nvim')
   let test#strategy = "neovim"
