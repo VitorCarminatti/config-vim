@@ -180,8 +180,6 @@ inoremap <C-Return> <CR><CR><C-o>k<Tab>
 
 set relativenumber
 
-map <silent> <C-\> :NERDTreeFocus<CR>
-
 if has('nvim')
   let test#strategy = "neovim"
 else
